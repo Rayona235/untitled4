@@ -1,21 +1,13 @@
 package PLayers;
 
-public abstract class Hero  extends GameEntity implements HavingSuperAbility{
-    private SuperAbility superAbility;
+public abstract class Hero implements HavingSuperAbility {
+
     private String heroName;
+    private int heroDamage;
 
-    public Hero(int health, int damage, SuperAbility superAbility, String heroName) {
-        super(health, damage);
-        this.superAbility = superAbility;
+    public Hero(String heroName, int heroDamage) {
         this.heroName = heroName;
-    }
-
-    public SuperAbility getSuperAbility() {
-        return superAbility;
-    }
-
-    public void setSuperAbility(SuperAbility superAbility) {
-        this.superAbility = superAbility;
+        this.heroDamage = heroDamage;
     }
 
     public String getHeroName() {
@@ -24,5 +16,13 @@ public abstract class Hero  extends GameEntity implements HavingSuperAbility{
 
     public void setHeroName(String heroName) {
         this.heroName = heroName;
+    }
+
+    public int getHeroDamage() {
+        return heroDamage;
+    }
+
+    public void setHeroDamage(int heroDamage) {
+        this.heroDamage = heroDamage;
     }
 }

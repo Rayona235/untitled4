@@ -2,12 +2,13 @@ package PLayers;
 
 public class Warrior extends Hero{
 
-    public Warrior(int health, int damage,  String heroName) {
-        super(health, damage,SuperAbility.CRITICAL_DAMAGE, heroName);
+
+    public Warrior(String heroName, int heroDamage) {
+        super(heroName, heroDamage);
     }
 
     @Override
-    public void applySuperAbility(Hero[] heroes, Boss boss) {
+    public void applySuperAbility(Hero[] heroes) {
 
     }
 }

@@ -1,20 +1,18 @@
 package PLayers;
 
-import general.RPG_Game;
+public class Magic extends Hero {
 
-public class Magic extends Hero{
-    public Magic(int health, int damage,  String heroName) {
-        super(health, damage, SuperAbility.BOOST, heroName);
+    public Magic(String heroName, int heroDamage) {
+        super(heroName, heroDamage);
     }
 
     @Override
-    public void applySuperAbility(Hero[] heroes, Boss boss) {
-        int number = RPG_Game.random.nextInt(5)+1;
-        for (int i = 0; i < heroes.length; i++) {
-            if (heroes[i].getHealth() > 0 && this != heroes[i]){
-                heroes[i].setDamage(heroes[i].getDamage()+ number);
-            }
+    public void applySuperAbility(Hero[] heroes) {
 
-        }
     }
 }
+
+
+
+
+
